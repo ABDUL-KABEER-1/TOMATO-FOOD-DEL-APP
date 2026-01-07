@@ -11,21 +11,21 @@ import { fileURLToPath } from "url";
 
 dotenv.config(); 
 
-//app config
+// app config
 const app = express();
-const port = 4000;
+const PORT = process.env.PORT || 8000;
 
-//middleware
+// middleware
 app.use(express.json());
 app.use(cors());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-//db connection
+// db connection
 connectDB();
 
-//api endpoints
+// api endpoints
 app.use("/api/food", foodRouter);
 app.use("/images", express.static(path.join(__dirname, "uploads")));
 app.use("/api/user", userRouter);
@@ -33,9 +33,9 @@ app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
 app.get("/", (req, res) => {
-  res.send("API Working");
+  res.send("API Working 🚀");
 });
 
-app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
