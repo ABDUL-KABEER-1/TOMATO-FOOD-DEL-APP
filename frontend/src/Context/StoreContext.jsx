@@ -8,7 +8,7 @@ const StoreContextProvider = (props) => {
 
     
     const [cartItems, setCartItems] = useState({});  
-    const url = "http://localhost:4000"
+const url = "https://poised-armadillo-tomato-fda-c166d089.koyeb.app"
     const [token, setToken] = useState("")
     const [food_list, setFoodList] = useState([]);
 

@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const url="http://localhost:4000"
+const url = "https://poised-armadillo-tomato-fda-c166d089.koyeb.app"
   return (
     <div>
       <ToastContainer/>
